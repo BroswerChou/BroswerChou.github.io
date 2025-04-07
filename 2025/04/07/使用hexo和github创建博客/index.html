@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="使用hexo和github创建博客, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>使用hexo和github创建博客 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">使用hexo和github创建博客</h1>
                 </div>
             </div>
         </div>
@@ -464,19 +464,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h1 id="github上面创建仓库"><a href="#github上面创建仓库" class="headerlink" title="github上面创建仓库"></a>github上面创建仓库</h1><p>在github上面创建一个新的仓库包含两个分支main和hexo，仓库名称为”用户名.github.io”<br>main分支用来存储生成的静态网页，进行Github Pages展示；<br>hexo分支用来存储hexo源码，进行写作和生成网页;</p>
+<h1 id="hexo下载"><a href="#hexo下载" class="headerlink" title="hexo下载"></a>hexo下载</h1><p>创建一个新的文件夹用于存储博客信息<br>打开命令行窗口或者git bash进入到该文件夹下<br>输如npm i hexo-cli -g安装hexo<br>安装完成后输入hexo -V验证是否安装成功<br>输入hexo init初始化文件夹<br>输入npm install安装相关组件<br>输入hexo clean清楚冗余文件、输出hexo g生成静态网页、输入hexo s在本地预览</p>
+<h2 id="1、确保你的-Hexo-项目能正常生成和部署"><a href="#1、确保你的-Hexo-项目能正常生成和部署" class="headerlink" title="1、确保你的 Hexo 项目能正常生成和部署"></a>1、确保你的 Hexo 项目能正常生成和部署</h2><p>‘’’<br>hexo clean<br>hexo g<br>npm install hexo-deployer-git –save<br>‘’’</p>
+<h2 id="2、配置-Hexo-让它把-public-推送到-main-分支"><a href="#2、配置-Hexo-让它把-public-推送到-main-分支" class="headerlink" title="2、配置 Hexo 让它把 public&#x2F; 推送到 main 分支"></a>2、配置 Hexo 让它把 public&#x2F; 推送到 main 分支</h2><p>‘’’<br>deploy:<br>  type: git<br>  repo: <a target="_blank" rel="noopener" href="https://github.com/BroswerChou/BroswerChou.github.io.git">https://github.com/BroswerChou/BroswerChou.github.io.git</a><br>  branch: main<br>‘’’<br>注意repo需要根据使用的是http或者ssh选择不同的链接,branch: main 表示将静态文件推送到 main 分支</p>
+<h2 id="3、把博客源码推送到-hexo-分支"><a href="#3、把博客源码推送到-hexo-分支" class="headerlink" title="3、把博客源码推送到 hexo 分支"></a>3、把博客源码推送到 hexo 分支</h2><p>‘’’<br>初始化本地 Git 仓库（如果还没做）:<br>git init<br>git remote add origin <a target="_blank" rel="noopener" href="https://github.com/BroswerChou/BroswerChou.github.io.git">https://github.com/BroswerChou/BroswerChou.github.io.git</a></p>
+<p>创建 hexo 分支并切换过去：<br>git checkout -b hexo</p>
+<p>把当前 Hexo 项目的源代码（除了 public&#x2F;）推送到 GitHub 的 hexo 分支:<br>忽略 public 目录<br>echo “public&#x2F;“ &gt;&gt; .gitignore</p>
+<p>正常提交<br>git add .<br>git commit -m “Hexo 源码初始化”<br>git push origin hexo<br>‘’’</p>
+<h2 id="4、部署博客（生成-推送-public-到-main）"><a href="#4、部署博客（生成-推送-public-到-main）" class="headerlink" title="4、部署博客（生成 + 推送 public 到 main）:"></a>4、部署博客（生成 + 推送 public 到 main）:</h2><p>‘’’<br>hexo clean<br>hexo g<br>hexo d<br>‘’’</p>
+<h2 id="5、启用-GitHub-Pages"><a href="#5、启用-GitHub-Pages" class="headerlink" title="5、启用 GitHub Pages"></a>5、启用 GitHub Pages</h2><p>打开你的仓库、点击右上角 Settings、找到左侧栏的 Pages 或 Pages and Deployment、设置 Source 为：Deploy from a branch → 分支选择 main → 路径保持 &#x2F; (root)、等几分钟后，访问：👉 <a target="_blank" rel="noopener" href="https://xxx.github.io/">https://xxx.github.io</a></p>
+<h2 id="部署脚本（一键完成）"><a href="#部署脚本（一键完成）" class="headerlink" title="部署脚本（一键完成）"></a>部署脚本（一键完成）</h2><p>可以在根目录下新建一个 deploy.sh 脚本文件（适用于 Git Bash 或 Linux &#x2F; Mac）：<br>执行：bash deploy.sh，一键完成源码和部署。<br>‘’’<br>#!&#x2F;bin&#x2F;bash<br>hexo clean<br>hexo g<br>hexo d<br>git add .<br>git commit -m “更新博客源码”<br>git push origin hexo<br>‘’’</p>
+<h1 id="写博客文章并发布"><a href="#写博客文章并发布" class="headerlink" title="写博客文章并发布"></a>写博客文章并发布</h1><p>1、创建文章：hexo new post “我的第一篇博客”，会在source&#x2F;_posts&#x2F; 目录下创建一个新的 Markdown 文件<br>2、编写文章：进入.md文档内编写<br>3、生成静态文件：<br>‘’’<br>hexo clean<br>hexo g<br>‘’’<br>4、提交文章到Github：<br>4.1 在hexo分支下面提交博客<br>‘’’<br>确保你在 hexo 分支<br>git checkout hexo</p>
+<p>添加新文件<br>git add .</p>
+<p>提交<br>git commit -m “添加第一篇博客”</p>
+<p>推送到 GitHub<br>git push origin hexo<br>‘’’<br>4.2 部署到main分支：hexo d<br>这条命令会将 public&#x2F; 文件夹中的静态文件部署到 GitHub 仓库的 main 分支，从而在 GitHub Pages 上展示你的博客。<br>5、查看博客：https:&#x2F;&#x2F;你的GitHub用户名.github.io</p>
 
                 
             </div>
@@ -503,7 +505,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://BroswerChou.github.io/2025/04/07/hello-world/">http://BroswerChou.github.io/2025/04/07/hello-world/</a>
+                    <a href="http://BroswerChou.github.io/2025/04/07/%E4%BD%BF%E7%94%A8hexo%E5%92%8Cgithub%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">http://BroswerChou.github.io/2025/04/07/%E4%BD%BF%E7%94%A8hexo%E5%92%8Cgithub%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -708,9 +710,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2025/04/07/%E4%BD%BF%E7%94%A8hexo%E5%92%8Cgithub%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
@@ -728,9 +731,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2025-04-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-04-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -739,6 +742,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -746,7 +750,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2025/04/07/hello-world/">
@@ -776,7 +780,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
