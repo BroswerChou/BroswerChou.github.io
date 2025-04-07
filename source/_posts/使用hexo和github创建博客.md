@@ -9,6 +9,7 @@ password:
 summary:
 tags:
 categories:
+---
 
 # github上面创建仓库
 在github上面创建一个新的仓库包含两个分支main和hexo，仓库名称为"用户名.github.io"
@@ -105,7 +106,6 @@ git push origin hexo
 4.2 部署到main分支：hexo d
 这条命令会将 public/ 文件夹中的静态文件部署到 GitHub 仓库的 main 分支，从而在 GitHub Pages 上展示你的博客。
 5、查看博客：https://你的GitHub用户名.github.io
----
 
 
 
