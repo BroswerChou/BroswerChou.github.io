@@ -8,7 +8,11 @@ date: 2025-04-07 20:58:47
 password:
 summary:
 tags:
+  - Hexo
+  - 博客搭建
+  - GitHub Pages
 categories:
+  - 教程
 ---
 
 # github上面创建仓库
