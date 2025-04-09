@@ -132,11 +132,11 @@ indexbtn:
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/blinkfox
-  email: 1181062873@qq.com
+  github:  https://github.com/BroswerChou
+  email: 3223340165@qq.com
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
-  qq: 1181062873
+  qq: 3223340165
   weibo: # https://weibo.com/xxx
   zhihu: # https://www.zhihu.com/xxx
   rss: true # true、false
@@ -237,22 +237,22 @@ mySkills:
   data:
     Java:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
-      percent: 85%
+      percent: 8%
     JavaScript:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
-      percent: 80%
+      percent: 8%
     HTML5:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
-      percent: 80%
+      percent: 8%
     CSS:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-      percent: 70%
+      percent: 8%
     SQL:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
-      percent: 90%
+      percent: 8%
     程序设计:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
-      percent: 75%
+      percent: 8%
 
 # config gallery of my photos in about page.
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
@@ -283,7 +283,7 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: false
+  enable: true
   owner:
   repo:
   oauth:
@@ -294,7 +294,7 @@ gitalk:
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
 gitment:
-  enable: false
+  enable: true
   owner:
   repo:
   oauth:
@@ -304,13 +304,13 @@ gitment:
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
 disqus:
-  enable: false
+  enable: true
   shortname:
 
 # Livere comment configuration, the default is not activated
 # Livere 来必力评论模块的配置，默认为不激活
 livere:
-  enable: false
+  enable: true
   uid:
 
 # The configuration of the Valine comment module is not activated by default.
