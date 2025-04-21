@@ -435,6 +435,10 @@
                                 <span class="chip bg-color">环境配置</span>
                             </a>
                         
+                            <a href="/tags/jupyter/">
+                                <span class="chip bg-color">jupyter</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -465,7 +469,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    549
+                    628
                 </div>
                 
 
@@ -494,12 +498,25 @@
             <div id="articleContent">
                 <h4 id="MobaXterm创建普通用户"><a href="#MobaXterm创建普通用户" class="headerlink" title="MobaXterm创建普通用户"></a>MobaXterm创建普通用户</h4><p>切换管理员 sudo -s<br>增加新用户 adduser username<br>输入密码、<br>查看目录 ls -l &#x2F;home,出现username目录名即为成功</p>
 <h4 id="Linux服务器上面安装Anaconda"><a href="#Linux服务器上面安装Anaconda" class="headerlink" title="Linux服务器上面安装Anaconda"></a>Linux服务器上面安装Anaconda</h4><p>1、下载anaconda安装包，并将其移入Linux环境中<br>2、使用chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh命令赋予权限<br>3、使用.&#x2F;Anaconda3-5.3.0-Linux-x86_64.sh执行安装<br>4、一直Enter+yes<br>5、重新打开终端，输入conda -V查看<br>如果显示does not exit ，请执行chown wj:wj -R &#x2F;home&#x2F;wj这条语句，wj改为自己的用户名</p>
-<h4 id="配置pytorch"><a href="#配置pytorch" class="headerlink" title="配置pytorch"></a>配置pytorch</h4><p>conda create -n 用户名 python&#x3D;xxx<br>conda activate 用户名<br>pip或者conda安装pytorch相关包</p>
+<h4 id="配置pytorch"><a href="#配置pytorch" class="headerlink" title="配置pytorch"></a>配置pytorch</h4><blockquote>
+<p>conda create -n 用户名 python&#x3D;xxx<br>conda activate 用户名<br>pip或者conda安装pytorch相关包</p>
+</blockquote>
 <h4 id="linux中cuda-toolkit安装方法："><a href="#linux中cuda-toolkit安装方法：" class="headerlink" title="linux中cuda toolkit安装方法："></a>linux中cuda toolkit安装方法：</h4><p>1、进入以下网址，选择对应的版本<a target="_blank" rel="noopener" href="https://developer.nvidia.com/">https://developer.nvidia.com</a><br>2、执行所给出的命令。如果显示xx不在sudoers文件中，执行下面命令：<br>	Su root，输入root密码后执行usermod -aG sudo zyt，即可给权限，在安装即可<br>3、cd &#x2F;usr&#x2F;local&#x2F;cuda-11.8&#x2F;bin进入文件夹，ls -la查看所有文件，执行.&#x2F;nvcc –version可以查看版本，然后cd ~返回主文件夹<br>4、sudo nano .bashrc进入编辑，修改路径<br>5、在最后一行加上 export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.8&#x2F;bin${PATH:+:${PATH}}保存之后重新打开一个终端即可</p>
 <p>安装好cuda tookit之后出现新的问题：<br>NO cuda runtime is found. CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.X<br>尝试 (1)export FORCE_CUDA&#x3D;1没用<br>尝试 (2)export CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.X无用<br>尝试 (3)切换不同的torch版本进行尝试无用</p>
-<h4 id="Conda-相关命令"><a href="#Conda-相关命令" class="headerlink" title="Conda 相关命令"></a>Conda 相关命令</h4><p>import torch<br>print(torch.cuda.is_available())  # 是否检测到 CUDA<br>print(torch.version.cuda)         # 检查 PyTorch 绑定的 CUDA 版本<br>print(torch.backends.cudnn.version())  # 检查 cuDNN 版本（如果可用）<br>import torch<br>print(torch.cuda.is_available())  # 检查是否检测到 CUDA 设备<br>print(torch.cuda.device_count())  # 检查 GPU 数量<br>print(torch.cuda.get_device_name(0))  # 获取第一个 GPU 的名称<br>import torch</p>
-<p>print(“CUDA available:”, torch.cuda.is_available())<br>print(“CUDA version:”, torch.version.cuda)<br>print(“cuDNN version:”, torch.backends.cudnn.version())<br>print(“GPU device name:”, torch.cuda.get_device_name(0))<br>print(“Current GPU:”, torch.cuda.current_device())</p>
-<h6 id="创建一个张量并移动到-GPU，测试计算是否正常"><a href="#创建一个张量并移动到-GPU，测试计算是否正常" class="headerlink" title="创建一个张量并移动到 GPU，测试计算是否正常"></a>创建一个张量并移动到 GPU，测试计算是否正常</h6><p>x &#x3D; torch.randn(2, 3).cuda()<br>print(“Tensor on GPU:”, x.device)</p>
+<h4 id="Conda-相关命令"><a href="#Conda-相关命令" class="headerlink" title="Conda 相关命令"></a>Conda 相关命令</h4><blockquote>
+<p>import torch<br>print(torch.cuda.is_available())  # 是否检测到 CUDA<br>print(torch.version.cuda)         # 检查 PyTorch 绑定的 CUDA 版本<br>print(torch.backends.cudnn.version())  # 检查 cuDNN 版本（如果可用）<br>import torch<br>print(torch.cuda.is_available())  # 检查是否检测到 CUDA 设备<br>print(torch.cuda.device_count())  # 检查 GPU 数量<br>print(torch.cuda.get_device_name(0))  # 获取第一个 GPU 的名称<br>import torch<br>print(“CUDA available:”, torch.cuda.is_available())<br>print(“CUDA version:”, torch.version.cuda)<br>print(“cuDNN version:”, torch.backends.cudnn.version())<br>print(“GPU device name:”, torch.cuda.get_device_name(0))<br>print(“Current GPU:”, torch.cuda.current_device())</p>
+</blockquote>
+<h6 id="创建一个张量并移动到-GPU，测试计算是否正常"><a href="#创建一个张量并移动到-GPU，测试计算是否正常" class="headerlink" title="创建一个张量并移动到 GPU，测试计算是否正常"></a>创建一个张量并移动到 GPU，测试计算是否正常</h6><blockquote>
+<p>x &#x3D; torch.randn(2, 3).cuda()<br>print(“Tensor on GPU:”, x.device)</p>
+</blockquote>
+<h4 id="jupyter环境"><a href="#jupyter环境" class="headerlink" title="jupyter环境"></a>jupyter环境</h4><p>pycharm使用服务器上的conda环境运行ipynb后缀的代码需要安装什么：<br>1、服务器上面的相关工作</p>
+<blockquote>
+<p>conda install ipykernel jupyter是让 conda 环境变成一个可用的 Jupyter 内核<br>python -m ipykernel install –user –name your_env_name –display-name “Python (your_env_name)”</p>
+</blockquote>
+<p>2、pycharm上的相关工作</p>
+<blockquote>
+<p>安装jupyter插件</p>
+</blockquote>
 
                 
             </div>
@@ -566,6 +583,10 @@
                             
                                 <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
                                     <span class="chip bg-color">环境配置</span>
+                                </a>
+                            
+                                <a href="/tags/jupyter/">
+                                    <span class="chip bg-color">jupyter</span>
                                 </a>
                             
                         </div>
@@ -1061,7 +1082,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.5k</span>&nbsp;字
+                class="white-color">1.8k</span>&nbsp;字
             
             
             

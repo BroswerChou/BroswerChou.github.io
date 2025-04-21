@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>git</title>
+      <link href="/2025/04/21/vscode%E4%B8%AD%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8git%E6%8E%A8%E9%80%81%E5%88%B0github/"/>
+      <url>/2025/04/21/vscode%E4%B8%AD%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8git%E6%8E%A8%E9%80%81%E5%88%B0github/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1、配置Git"><a href="#1、配置Git" class="headerlink" title="1、配置Git"></a>1、配置Git</h1><blockquote><p>git config –global user.name “你的用户名”<br>git config –global user.email “你的邮箱”</p></blockquote><p>或者使用</p><blockquote><p>git config –list查看配置信息</p></blockquote><h3 id="情况-1：你还没有初始化-Git-仓库"><a href="#情况-1：你还没有初始化-Git-仓库" class="headerlink" title="情况 1：你还没有初始化 Git 仓库"></a>情况 1：你还没有初始化 Git 仓库</h3><p>1、打开 VS Code 中的项目文件夹。</p><p>2、打开左侧源代码管理面板（Source Control，快捷键 Ctrl+Shift+G）。</p><p>3、点击“Initialize Repository”（初始化仓库）。</p><p>4、添加远程地址（先在 GitHub 创建一个新仓库，不要勾选 README）：</p><p>5、打开终端，执行：</p><blockquote><p>git remote add origin <a href="https://github.com/%E4%BD%A0%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BD%A0%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8D.git">https://github.com/你的用户名/你的仓库名.git</a></p></blockquote><p>6、添加、提交并推送代码：</p><blockquote><p>git add .<br>git commit -m “初始化提交”<br>git push -u origin master  # 有时是 main，下面说明</p></blockquote><p>⚠️ 注意：GitHub 默认分支是 main，如果你的本地是 master，第一次推送时可能需要：</p><blockquote><p>git push -u origin master:main</p></blockquote><p>或你可以改本地分支：</p><blockquote><p>git branch -M main<br>git push -u origin main</p></blockquote><h3 id="情况-2：你已经初始化并有远程地址"><a href="#情况-2：你已经初始化并有远程地址" class="headerlink" title="情况 2：你已经初始化并有远程地址"></a>情况 2：你已经初始化并有远程地址</h3><p>只需要执行情况1的第六步操作</p><p>如果推送时间显示不能连接到服务器，请使用ssh连接，执行下面命令：</p><blockquote><p>git remote set-url origin <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">git@github.com</a>:用户名u&#x2F;仓库名.git</p></blockquote><p>然后再尝试推送</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>深度学习教程</title>
       <link href="/2025/04/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/"/>
       <url>/2025/04/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/</url>
@@ -29,7 +48,7 @@
       <link href="/2025/04/09/pycharm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
       <url>/2025/04/09/pycharm%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<h4 id="MobaXterm创建普通用户"><a href="#MobaXterm创建普通用户" class="headerlink" title="MobaXterm创建普通用户"></a>MobaXterm创建普通用户</h4><p>切换管理员 sudo -s<br>增加新用户 adduser username<br>输入密码、<br>查看目录 ls -l &#x2F;home,出现username目录名即为成功</p><h4 id="Linux服务器上面安装Anaconda"><a href="#Linux服务器上面安装Anaconda" class="headerlink" title="Linux服务器上面安装Anaconda"></a>Linux服务器上面安装Anaconda</h4><p>1、下载anaconda安装包，并将其移入Linux环境中<br>2、使用chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh命令赋予权限<br>3、使用.&#x2F;Anaconda3-5.3.0-Linux-x86_64.sh执行安装<br>4、一直Enter+yes<br>5、重新打开终端，输入conda -V查看<br>如果显示does not exit ，请执行chown wj:wj -R &#x2F;home&#x2F;wj这条语句，wj改为自己的用户名</p><h4 id="配置pytorch"><a href="#配置pytorch" class="headerlink" title="配置pytorch"></a>配置pytorch</h4><p>conda create -n 用户名 python&#x3D;xxx<br>conda activate 用户名<br>pip或者conda安装pytorch相关包</p><h4 id="linux中cuda-toolkit安装方法："><a href="#linux中cuda-toolkit安装方法：" class="headerlink" title="linux中cuda toolkit安装方法："></a>linux中cuda toolkit安装方法：</h4><p>1、进入以下网址，选择对应的版本<a href="https://developer.nvidia.com/">https://developer.nvidia.com</a><br>2、执行所给出的命令。如果显示xx不在sudoers文件中，执行下面命令：<br>Su root，输入root密码后执行usermod -aG sudo zyt，即可给权限，在安装即可<br>3、cd &#x2F;usr&#x2F;local&#x2F;cuda-11.8&#x2F;bin进入文件夹，ls -la查看所有文件，执行.&#x2F;nvcc –version可以查看版本，然后cd ~返回主文件夹<br>4、sudo nano .bashrc进入编辑，修改路径<br>5、在最后一行加上 export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.8&#x2F;bin${PATH:+:${PATH}}保存之后重新打开一个终端即可</p><p>安装好cuda tookit之后出现新的问题：<br>NO cuda runtime is found. CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.X<br>尝试 (1)export FORCE_CUDA&#x3D;1没用<br>尝试 (2)export CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.X无用<br>尝试 (3)切换不同的torch版本进行尝试无用</p><h4 id="Conda-相关命令"><a href="#Conda-相关命令" class="headerlink" title="Conda 相关命令"></a>Conda 相关命令</h4><p>import torch<br>print(torch.cuda.is_available())  # 是否检测到 CUDA<br>print(torch.version.cuda)         # 检查 PyTorch 绑定的 CUDA 版本<br>print(torch.backends.cudnn.version())  # 检查 cuDNN 版本（如果可用）<br>import torch<br>print(torch.cuda.is_available())  # 检查是否检测到 CUDA 设备<br>print(torch.cuda.device_count())  # 检查 GPU 数量<br>print(torch.cuda.get_device_name(0))  # 获取第一个 GPU 的名称<br>import torch</p><p>print(“CUDA available:”, torch.cuda.is_available())<br>print(“CUDA version:”, torch.version.cuda)<br>print(“cuDNN version:”, torch.backends.cudnn.version())<br>print(“GPU device name:”, torch.cuda.get_device_name(0))<br>print(“Current GPU:”, torch.cuda.current_device())</p><h6 id="创建一个张量并移动到-GPU，测试计算是否正常"><a href="#创建一个张量并移动到-GPU，测试计算是否正常" class="headerlink" title="创建一个张量并移动到 GPU，测试计算是否正常"></a>创建一个张量并移动到 GPU，测试计算是否正常</h6><p>x &#x3D; torch.randn(2, 3).cuda()<br>print(“Tensor on GPU:”, x.device)</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="MobaXterm创建普通用户"><a href="#MobaXterm创建普通用户" class="headerlink" title="MobaXterm创建普通用户"></a>MobaXterm创建普通用户</h4><p>切换管理员 sudo -s<br>增加新用户 adduser username<br>输入密码、<br>查看目录 ls -l &#x2F;home,出现username目录名即为成功</p><h4 id="Linux服务器上面安装Anaconda"><a href="#Linux服务器上面安装Anaconda" class="headerlink" title="Linux服务器上面安装Anaconda"></a>Linux服务器上面安装Anaconda</h4><p>1、下载anaconda安装包，并将其移入Linux环境中<br>2、使用chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh命令赋予权限<br>3、使用.&#x2F;Anaconda3-5.3.0-Linux-x86_64.sh执行安装<br>4、一直Enter+yes<br>5、重新打开终端，输入conda -V查看<br>如果显示does not exit ，请执行chown wj:wj -R &#x2F;home&#x2F;wj这条语句，wj改为自己的用户名</p><h4 id="配置pytorch"><a href="#配置pytorch" class="headerlink" title="配置pytorch"></a>配置pytorch</h4><blockquote><p>conda create -n 用户名 python&#x3D;xxx<br>conda activate 用户名<br>pip或者conda安装pytorch相关包</p></blockquote><h4 id="linux中cuda-toolkit安装方法："><a href="#linux中cuda-toolkit安装方法：" class="headerlink" title="linux中cuda toolkit安装方法："></a>linux中cuda toolkit安装方法：</h4><p>1、进入以下网址，选择对应的版本<a href="https://developer.nvidia.com/">https://developer.nvidia.com</a><br>2、执行所给出的命令。如果显示xx不在sudoers文件中，执行下面命令：<br>Su root，输入root密码后执行usermod -aG sudo zyt，即可给权限，在安装即可<br>3、cd &#x2F;usr&#x2F;local&#x2F;cuda-11.8&#x2F;bin进入文件夹，ls -la查看所有文件，执行.&#x2F;nvcc –version可以查看版本，然后cd ~返回主文件夹<br>4、sudo nano .bashrc进入编辑，修改路径<br>5、在最后一行加上 export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.8&#x2F;bin${PATH:+:${PATH}}保存之后重新打开一个终端即可</p><p>安装好cuda tookit之后出现新的问题：<br>NO cuda runtime is found. CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.X<br>尝试 (1)export FORCE_CUDA&#x3D;1没用<br>尝试 (2)export CUDA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda-11.X无用<br>尝试 (3)切换不同的torch版本进行尝试无用</p><h4 id="Conda-相关命令"><a href="#Conda-相关命令" class="headerlink" title="Conda 相关命令"></a>Conda 相关命令</h4><blockquote><p>import torch<br>print(torch.cuda.is_available())  # 是否检测到 CUDA<br>print(torch.version.cuda)         # 检查 PyTorch 绑定的 CUDA 版本<br>print(torch.backends.cudnn.version())  # 检查 cuDNN 版本（如果可用）<br>import torch<br>print(torch.cuda.is_available())  # 检查是否检测到 CUDA 设备<br>print(torch.cuda.device_count())  # 检查 GPU 数量<br>print(torch.cuda.get_device_name(0))  # 获取第一个 GPU 的名称<br>import torch<br>print(“CUDA available:”, torch.cuda.is_available())<br>print(“CUDA version:”, torch.version.cuda)<br>print(“cuDNN version:”, torch.backends.cudnn.version())<br>print(“GPU device name:”, torch.cuda.get_device_name(0))<br>print(“Current GPU:”, torch.cuda.current_device())</p></blockquote><h6 id="创建一个张量并移动到-GPU，测试计算是否正常"><a href="#创建一个张量并移动到-GPU，测试计算是否正常" class="headerlink" title="创建一个张量并移动到 GPU，测试计算是否正常"></a>创建一个张量并移动到 GPU，测试计算是否正常</h6><blockquote><p>x &#x3D; torch.randn(2, 3).cuda()<br>print(“Tensor on GPU:”, x.device)</p></blockquote><h4 id="jupyter环境"><a href="#jupyter环境" class="headerlink" title="jupyter环境"></a>jupyter环境</h4><p>pycharm使用服务器上的conda环境运行ipynb后缀的代码需要安装什么：<br>1、服务器上面的相关工作</p><blockquote><p>conda install ipykernel jupyter是让 conda 环境变成一个可用的 Jupyter 内核<br>python -m ipykernel install –user –name your_env_name –display-name “Python (your_env_name)”</p></blockquote><p>2、pycharm上的相关工作</p><blockquote><p>安装jupyter插件</p></blockquote>]]></content>
       
       
       <categories>
@@ -42,6 +61,8 @@
         <tags>
             
             <tag> 环境配置 </tag>
+            
+            <tag> jupyter </tag>
             
         </tags>
       
