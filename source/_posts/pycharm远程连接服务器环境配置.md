@@ -9,6 +9,7 @@ password:
 summary:
 tags:
  - 环境配置
+ - jupyter
 categories:
  - 教程
 ---
@@ -25,7 +26,7 @@ categories:
 5、重新打开终端，输入conda -V查看
 如果显示does not exit ，请执行chown wj:wj -R /home/wj这条语句，wj改为自己的用户名
 #### 配置pytorch
-conda create -n 用户名 python=xxx
+>conda create -n 用户名 python=xxx
 conda activate 用户名
 pip或者conda安装pytorch相关包
 
@@ -44,7 +45,7 @@ NO cuda runtime is found. CUDA_HOME=/usr/local/cuda-11.X
 尝试 (3)切换不同的torch版本进行尝试无用
 
 #### Conda 相关命令
-import torch
+>import torch
 print(torch.cuda.is_available())  # 是否检测到 CUDA
 print(torch.version.cuda)         # 检查 PyTorch 绑定的 CUDA 版本
 print(torch.backends.cudnn.version())  # 检查 cuDNN 版本（如果可用）
@@ -53,7 +54,6 @@ print(torch.cuda.is_available())  # 检查是否检测到 CUDA 设备
 print(torch.cuda.device_count())  # 检查 GPU 数量
 print(torch.cuda.get_device_name(0))  # 获取第一个 GPU 的名称
 import torch
-
 print("CUDA available:", torch.cuda.is_available())
 print("CUDA version:", torch.version.cuda)
 print("cuDNN version:", torch.backends.cudnn.version())
@@ -61,5 +61,17 @@ print("GPU device name:", torch.cuda.get_device_name(0))
 print("Current GPU:", torch.cuda.current_device())
 
 ###### 创建一个张量并移动到 GPU，测试计算是否正常
-x = torch.randn(2, 3).cuda()
+>x = torch.randn(2, 3).cuda()
 print("Tensor on GPU:", x.device)
+
+#### jupyter环境
+
+pycharm使用服务器上的conda环境运行ipynb后缀的代码需要安装什么：
+1、服务器上面的相关工作
+>conda install ipykernel jupyter是让 conda 环境变成一个可用的 Jupyter 内核
+>python -m ipykernel install --user --name your_env_name --display-name "Python (your_env_name)"
+
+2、pycharm上的相关工作
+>安装jupyter插件
+
+
